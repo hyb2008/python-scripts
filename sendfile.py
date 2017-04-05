@@ -19,7 +19,7 @@ def get_file():
     day = time.strftime('%Y%m%d', time.localtime(time.time()))
     name = day + "_trade.xlsx"
     filename = '/home/release/trunk/src/release/exchange_bk/' + name 
-    pkey = '/home/huyabing/.ssh/id_rsa'
+    pkey = '/home/XXXXX/.ssh/id_rsa'
     key = paramiko.RSAKey.from_private_key_file(pkey)
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -37,10 +37,10 @@ def get_file():
 def send_mail():
     filename = get_file()
     smtpserver = 'smtp.sohu.com'
-    username = 'royunwei@sohu.com'
-    password = 'roshyhda'
-    sender = 'royunwei@sohu.com'
-    receivers = ['274871780@qq.com', '834440967@qq.com']
+    username = 'XXXXXXX@sohu.com'
+    password = 'XXXXXX'
+    sender = 'XXXXXXXX@sohu.com'
+    receivers = ['XXXXXXX', 'XXXXXXX']
     msg = MIMEMultipart()
     msg['From'] = 'huyabing'
     msg['To'] = ",".join(receivers)
