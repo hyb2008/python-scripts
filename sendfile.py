@@ -14,7 +14,7 @@ reload(sys)
 sys.setdefaultencoding('utf8')
 
 
-
+#下载文件
 def get_file():
     day = time.strftime('%Y%m%d', time.localtime(time.time()))
     name = day + "_trade.xlsx"
@@ -33,7 +33,7 @@ def get_file():
         print "%s  Download file %s successful" %(currenttime,name)
     return name
 
-
+#发送邮件
 def send_mail():
     filename = get_file()
     smtpserver = 'smtp.sohu.com'
